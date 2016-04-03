@@ -51,17 +51,96 @@
 	var React = __webpack_require__(5);
 	var ReactDOM = __webpack_require__(162);
 
+	var githubLink = 'https://github.com/kennyw12';
+	var linkedinLink = 'https://www.linkedin.com/in/kennyw12';
+
+	var Title = React.createClass({
+		render: function render() {
+			return React.createElement(
+				'div',
+				{ className: 'title' },
+				this.props.children
+			);
+		}
+	});
+
+	var Nav = React.createClass({
+		render: function render() {
+			return React.createElement(
+				'div',
+				{ className: 'nav' },
+				this.props.children
+			);
+		}
+	});
+
+	var NavItem = React.createClass({
+		render: function render() {
+			return React.createElement(
+				'div',
+				{ className: 'nav-item' },
+				this.props.children
+			);
+		}
+	});
+
+	var Header = React.createClass({
+		render: function render() {
+			return React.createElement(
+				'div',
+				{ className: 'amber header' },
+				React.createElement(
+					Title,
+					null,
+					'Kenny Wang'
+				),
+				React.createElement(
+					Nav,
+					null,
+					React.createElement(
+						NavItem,
+						null,
+						React.createElement(
+							'a',
+							{ target: '_blank', href: githubLink },
+							'Github'
+						)
+					),
+					React.createElement(
+						NavItem,
+						null,
+						React.createElement(
+							'a',
+							{ target: '_blank', href: linkedinLink },
+							'LinkedIn'
+						)
+					)
+				)
+			);
+		}
+	});
+
+	var Content = React.createClass({
+		render: function render() {
+			return React.createElement(
+				'div',
+				{ className: 'content-wrapper' },
+				React.createElement(
+					'div',
+					{ className: 'content' },
+					'I am a web developer trying out different technologies.'
+				)
+			);
+		}
+	});
+
 	var Application = React.createClass({
 		render: function render() {
-			console.log("rendering");
 			return React.createElement(
 				'div',
 				null,
-				React.createElement(
-					'p',
-					null,
-					'Hello World.'
-				)
+				React.createElement(Header, null),
+				React.createElement(Content, null)
 			);
 		}
 	});
@@ -84,8 +163,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./application.css", function() {
-				var newContent = require("!!./../../../node_modules/css-loader/index.js!./application.css");
+			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/sass-loader/index.js!./application.scss", function() {
+				var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/sass-loader/index.js!./application.scss");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -103,7 +182,7 @@
 
 
 	// module
-	exports.push([module.id, "body {\r\n\tfont-family: Verdana, Arial, Helvetica, sans-serif;\r\n}", ""]);
+	exports.push([module.id, "body {\n  font-family: 'Avenir Next', Avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif;\n  box-sizing: border-box;\n  background-color: #ECEFF1; }\n\n.amber {\n  background-color: #FFC107; }\n\n.blue-grey {\n  color: #607D8B; }\n\n.header {\n  top: 0;\n  left: 0;\n  width: 100%;\n  z-index: 2;\n  height: 64px;\n  position: fixed;\n  font-weight: 700;\n  border-bottom: 2px solid rgba(0, 0, 0, 0.07); }\n  .header .title {\n    padding: 25px 12px 22px 12px;\n    color: #263238; }\n  .header .nav {\n    position: absolute;\n    right: 32px;\n    top: 2px; }\n    .header .nav .nav-item {\n      display: inline-block;\n      padding-top: 22px; }\n      .header .nav .nav-item :focus, .header .nav .nav-item :hover {\n        border-bottom: 3px solid #263238; }\n      .header .nav .nav-item a {\n        text-decoration: none;\n        padding: 24px 12px 22px 12px;\n        color: #263238; }\n\n.content-wrapper {\n  display: flex;\n  flex-direction: row;\n  justify-content: center; }\n  .content-wrapper .content {\n    margin-top: 100px;\n    width: 75%;\n    border-radius: 5px;\n    background-color: #FFF8E1;\n    padding: 20px;\n    border-bottom: 2px solid rgba(0, 0, 0, 0.1); }\n", ""]);
 
 	// exports
 
