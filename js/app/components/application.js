@@ -79,5 +79,5 @@ const Application = React.createClass({
 
 ReactDOM.render(
   <Application/>,
-  document.getElementById("root")
+  document.getElementById('root')
 );
