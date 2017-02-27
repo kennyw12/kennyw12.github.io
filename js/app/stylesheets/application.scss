@@ -5,62 +5,62 @@ $amber: #FFC107;
 $lightamber: #FFF8E1;
 
 body {
-	font-family: 'Avenir Next', Avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	box-sizing: border-box;
-	white-space: pre;
+  font-family: 'Avenir Next', Avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  box-sizing: border-box;
+  white-space: pre;
 }
 
 .amber {
-	background-color: $amber;
+  background-color: $amber;
 }
 
 .blue-grey {
-	color: $bluegrey;
+  color: $bluegrey;
 }
 
 .header {
-	top: 0;
-	left: 0;
-	width: 100%;
-	z-index: 2;
-	height:	62px;
-	position: fixed;
-	font-weight: 700;
-	border-bottom: 2px solid rgba(0,0,0,0.07);
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	.title {
-		padding: 25px 12px 22px 12px;
-		color: $darkblue;
-	}
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+  height:  62px;
+  position: fixed;
+  font-weight: 700;
+  border-bottom: 2px solid rgba(0,0,0,0.07);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  .title {
+   padding: 25px 12px 22px 12px;
+   color: $darkblue;
+  }
 
-	.nav {
-		.nav-item {
-			display: inline-block;
-			padding-top: 22px
-			:focus, :hover {
-				border-bottom: 3px solid $darkblue;
-			}
-			a {
-				text-decoration: none;
-				padding: 24px 12px 22px 12px;
-				color: $darkblue;
-			}
-		}
-	}
+  .nav {
+   .nav-item {
+    display: inline-block;
+    padding-top: 22px;
+    :focus, :hover {
+      border-bottom: 3px solid $darkblue;
+    }
+    a {
+      text-decoration: none;
+      padding: 24px 12px 22px 12px;
+      color: $darkblue;
+    }
+   }
+  }
 }
 
 .content-wrapper {
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	.content {
-		margin-top: 100px;
-		width: 75%;
-		border-radius: 5px;
-		background-color: $lightamber;
-		padding: 20px;
-		border-bottom: 2px solid rgba(0,0,0,0.1);
-	}
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  .content {
+    margin-top: 100px;
+    width: 75%;
+    border-radius: 5px;
+    background-color: $lightamber;
+    padding: 20px;
+    border-bottom: 2px solid rgba(0,0,0,0.1);
+  }
 }
