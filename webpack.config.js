@@ -1,7 +1,6 @@
 module.exports = {
-  entry: './js/app/components/application.js',
   output: {
-    filename: './build/application.js'
+    filename: './application.js'
   },
   module: {
     loaders: [
